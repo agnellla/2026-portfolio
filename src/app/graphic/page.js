@@ -37,15 +37,15 @@ export default function GraphicPage() {
       items: [
         {
           gallery: ["/gd/hack1.png"],
-          alt: ".Hack Computer", 
+          alt: ".Hack Computer",
         },
-        { 
+        {
           gallery: ["/gd/hack2.png", "/gd/hack2-2.png"],
-          alt: "Marketing Welcome Post", 
+          alt: "Marketing Welcome Post",
         },
-        { 
+        {
           gallery: ["/gd/hack3.png"],
-          alt: "8th Executive Committee Introduction", 
+          alt: "8th Executive Committee Introduction",
         },
       ],
     },
@@ -124,29 +124,25 @@ export default function GraphicPage() {
       items: [
         {
           gallery: [
-            "/sxc/activities - 1.png",
-            "/sxc/activities - 2.png",
-            "/sxc/activities - 3.png",
-            "/sxc/activities - 4.png",
+            "/gd/sxc/activities - 1.png",
+            "/gd/sxc/activities - 2.png",
+            "/gd/sxc/activities - 3.png",
+            "/gd/sxc/activities - 4.png",
           ],
           alt: "Instagram Feed",
         },
         {
           gallery: [
-            "/sxc/GTKC 1.png",
-            "/sxc/GTKC 2.png",
-            "/sxc/GTKC 4.png",
-            "/sxc/GTKC 5.png",
-            "/sxc/GTKC 6.png",
+            "/gd/sxc/GTKC 1.png",
+            "/gd/sxc/GTKC 2.png",
+            "/gd/sxc/GTKC 4.png",
+            "/gd/sxc/GTKC 5.png",
+            "/gd/sxc/GTKC 6.png",
           ],
           alt: "Get to Know the CEO",
         },
         {
-          gallery: [
-            "/gd/sxc/cv2.png",
-            "/gd/sxc/cv2.png",
-            "/gd/sxc/cv3.png",
-          ],
+          gallery: ["/gd/sxc/cv2.png", "/gd/sxc/cv2.png", "/gd/sxc/cv3.png"],
           alt: "Resume VS CV",
         },
       ],
