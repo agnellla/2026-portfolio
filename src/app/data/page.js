@@ -151,13 +151,15 @@ export default function DataPage() {
                       </div>
                     </div>
                   </div>
-
-                  {/* Key Decision Callout */}
-
                   <div className="mt-6 flex gap-3">
-                    <button className="px-5 py-2.5 bg-slate-900 text-white rounded-xl text-sm font-bold shadow-lg shadow-purple-200/50 hover:bg-purple-600 transition-colors">
+                    <a
+                      href="/data/digiready.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-5 py-2.5 bg-slate-900 text-white rounded-xl text-sm font-bold shadow-lg shadow-purple-200/50 hover:bg-purple-600 transition-colors inline-block text-center"
+                    >
                       View Pitch Deck
-                    </button>
+                    </a>
                   </div>
                 </div>
 
@@ -328,7 +330,7 @@ export default function DataPage() {
                       </div>
                     </div>
                   </div>
-                  <div className="mt-8 flex gap-3">
+                  <div className="mt-6 flex gap-3">
                     <button className="px-5 py-2.5 bg-slate-900 text-white rounded-xl text-sm font-bold shadow-lg shadow-purple-200/50 hover:bg-purple-600 transition-colors">
                       View Pitch Deck
                     </button>
