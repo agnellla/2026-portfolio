@@ -67,7 +67,6 @@ export default function DataPage() {
 
           <div className="flex flex-col gap-8">
             {/* ── PROJECT 1: DigiReady ───────────────────────────────── */}
-            {/* ── PROJECT 1: DigiReady ───────────────────────────────── */}
             <div className="group bg-white rounded-[2.5rem] p-8 md:p-10 border border-slate-100 shadow-sm hover:shadow-2xl hover:shadow-purple-100 transition-all duration-500">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
                 {/* Left: Narrative */}
@@ -163,9 +162,9 @@ export default function DataPage() {
                   </div>
                 </div>
 
-                {/* Right: Video Demo Placeholder */}
+                {/* Right: Video */}
                 <div className="w-full flex flex-col gap-4">
-                  {/* Browser chrome + video placeholder */}
+                  {/* Browser chrome + video */}
                   <div className="rounded-2xl border border-slate-200 overflow-hidden shadow-sm bg-white">
                     {/* Fake browser bar */}
                     <div className="bg-slate-100 px-4 py-2.5 flex items-center gap-2 border-b border-slate-200">
@@ -179,38 +178,16 @@ export default function DataPage() {
                       </div>
                     </div>
 
-                    {/* Video placeholder body */}
-                    <div className="relative bg-slate-50 aspect-video flex flex-col items-center justify-center gap-3 group/video cursor-pointer">
-                      {/* Pulsing ring */}
-                      <div className="relative flex items-center justify-center">
-                        <div className="absolute w-16 h-16 rounded-full bg-purple-100 animate-ping opacity-40"></div>
-                        <div className="w-14 h-14 rounded-full bg-purple-600 flex items-center justify-center shadow-lg shadow-purple-200 relative z-10 group-hover/video:bg-purple-700 transition-colors">
-                          <svg
-                            className="w-5 h-5 text-white ml-1"
-                            fill="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path d="M8 5v14l11-7z" />
-                          </svg>
-                        </div>
-                      </div>
-
-                      <div className="text-center">
-                        <p className="text-sm font-bold text-slate-700">
-                          Demo coming soon
-                        </p>
-                        <p className="text-[11px] text-slate-400 mt-0.5">
-                          Desktop screen recording · ~2 min walkthrough
-                        </p>
-                      </div>
-
-                      {/* Corner badge */}
-                      <div className="absolute top-3 right-3 bg-white border border-slate-200 rounded-lg px-2 py-1 flex items-center gap-1.5 shadow-sm">
-                        <div className="w-1.5 h-1.5 rounded-full bg-red-400 animate-pulse"></div>
-                        <span className="text-[10px] font-bold text-slate-500 uppercase tracking-wide">
-                          Recording
-                        </span>
-                      </div>
+                    {/* Video — 2880×1800 → aspect ratio 8:5 (1.6:1) */}
+                    <div className="relative w-full" style={{ aspectRatio: "8/5" }}>
+                      <video
+                        className="absolute inset-0 w-full h-full object-cover"
+                        src="/data/digiready.mp4"
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                      />
                     </div>
                   </div>
 
@@ -268,9 +245,9 @@ export default function DataPage() {
             </div>
 
             {/* ── PROJECT 2: Organizational Performance Audit ────────── */}
+            {/* NOTE: Commented out — AIESEC deck not ready yet. Uncomment when deck is complete.
             <div className="group bg-white rounded-[2.5rem] p-8 md:p-10 border border-slate-100 shadow-sm hover:shadow-2xl hover:shadow-purple-100 transition-all duration-500">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
-                {/* Left: Narrative */}
                 <div>
                   <h3 className="font-heading text-3xl text-slate-800 mb-2">
                     Organizational Performance Audit
@@ -280,52 +257,39 @@ export default function DataPage() {
                   </p>
                   <div className="space-y-6 relative">
                     <div className="absolute left-[19px] top-2 bottom-2 w-0.5 bg-slate-100"></div>
-
                     <div className="relative flex gap-4">
                       <div className="w-10 h-10 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center shrink-0 border-4 border-white shadow-sm z-10">
                         <BarChart3 size={18} />
                       </div>
                       <div>
-                        <h4 className="font-bold text-slate-800 text-sm">
-                          Data Aggregation & Modeling
-                        </h4>
+                        <h4 className="font-bold text-slate-800 text-sm">Data Aggregation & Modeling</h4>
                         <p className="text-slate-500 text-sm mt-1">
-                          Engineered a centralized tracking dashboard to
-                          aggregate quantitative KPIs alongside qualitative
-                          360-degree feedback across 9 departments.
+                          Engineered a centralized tracking dashboard to aggregate quantitative KPIs
+                          alongside qualitative 360-degree feedback across 9 departments.
                         </p>
                       </div>
                     </div>
-
                     <div className="relative flex gap-4">
                       <div className="w-10 h-10 rounded-full bg-amber-50 text-amber-600 flex items-center justify-center shrink-0 border-4 border-white shadow-sm z-10">
                         <SearchCheck size={18} />
                       </div>
                       <div>
-                        <h4 className="font-bold text-slate-800 text-sm">
-                          Root Cause Analysis
-                        </h4>
+                        <h4 className="font-bold text-slate-800 text-sm">Root Cause Analysis</h4>
                         <p className="text-slate-500 text-sm mt-1">
-                          Cross-referenced metrics to uncover hidden operational
-                          bottlenecks. Identified that top-line performance was
-                          masking severe burnout in key units.
+                          Cross-referenced metrics to uncover hidden operational bottlenecks.
+                          Identified that top-line performance was masking severe burnout in key units.
                         </p>
                       </div>
                     </div>
-
                     <div className="relative flex gap-4">
                       <div className="w-10 h-10 rounded-full bg-green-50 text-green-600 flex items-center justify-center shrink-0 border-4 border-white shadow-sm z-10">
                         <Presentation size={18} />
                       </div>
                       <div>
-                        <h4 className="font-bold text-slate-800 text-sm">
-                          Strategic Implementation
-                        </h4>
+                        <h4 className="font-bold text-slate-800 text-sm">Strategic Implementation</h4>
                         <p className="text-slate-500 text-sm mt-1">
-                          Presented data-driven "State of the Organization"
-                          reports to executive leadership, providing tailored
-                          strategies to optimize performance and reduce
-                          turnover.
+                          Presented data-driven "State of the Organization" reports to executive
+                          leadership, providing tailored strategies to optimize performance and reduce turnover.
                         </p>
                       </div>
                     </div>
@@ -336,28 +300,17 @@ export default function DataPage() {
                     </button>
                   </div>
                 </div>
-
-                {/* Right: Data Visual */}
                 <div className="w-full bg-slate-50 rounded-2xl border border-slate-200 p-5 relative shadow-inner flex flex-col gap-4">
                   <div className="flex justify-between items-center bg-white p-3 rounded-xl border border-slate-100 shadow-sm">
                     <div className="flex flex-col">
-                      <span className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">
-                        Data Insight Snapshot
-                      </span>
-                      <span className="text-sm font-bold text-slate-800">
-                        The "Watermelon" Effect
-                      </span>
+                      <span className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Data Insight Snapshot</span>
+                      <span className="text-sm font-bold text-slate-800">The "Watermelon" Effect</span>
                     </div>
-                    <span className="bg-red-50 text-red-600 text-[10px] font-bold px-2 py-1 rounded">
-                      High Flight Risk
-                    </span>
+                    <span className="bg-red-50 text-red-600 text-[10px] font-bold px-2 py-1 rounded">High Flight Risk</span>
                   </div>
-
                   <div className="bg-white rounded-xl border border-slate-100 overflow-hidden">
                     <div className="bg-purple-50 px-3 py-2 border-b border-purple-100 flex justify-between">
-                      <span className="text-[10px] font-bold text-purple-700 uppercase">
-                        Marketing Dept. Metrics
-                      </span>
+                      <span className="text-[10px] font-bold text-purple-700 uppercase">Marketing Dept. Metrics</span>
                     </div>
                     <table className="w-full text-[10px] text-left">
                       <thead className="text-slate-400 border-b border-slate-50">
@@ -370,81 +323,56 @@ export default function DataPage() {
                       </thead>
                       <tbody className="divide-y divide-slate-50">
                         <tr>
-                          <td className="p-2 pl-3 font-bold text-slate-700">
-                            Content KPI
-                          </td>
+                          <td className="p-2 pl-3 font-bold text-slate-700">Content KPI</td>
                           <td className="p-2 text-slate-500">12</td>
                           <td className="p-2 text-slate-500">12</td>
-                          <td className="p-2 text-right font-bold text-green-600">
-                            100%
-                          </td>
+                          <td className="p-2 text-right font-bold text-green-600">100%</td>
                         </tr>
                         <tr>
-                          <td className="p-2 pl-3 font-bold text-slate-700">
-                            Lead Gen KPI
-                          </td>
+                          <td className="p-2 pl-3 font-bold text-slate-700">Lead Gen KPI</td>
                           <td className="p-2 text-slate-500">50</td>
                           <td className="p-2 text-slate-500">48</td>
-                          <td className="p-2 text-right font-bold text-green-600">
-                            96%
-                          </td>
+                          <td className="p-2 text-right font-bold text-green-600">96%</td>
                         </tr>
                       </tbody>
                     </table>
                   </div>
-
                   <div className="bg-white rounded-xl border border-slate-100 overflow-hidden">
                     <div className="bg-amber-50 px-3 py-2 border-b border-amber-100 flex justify-between">
-                      <span className="text-[10px] font-bold text-amber-700 uppercase">
-                        360-Degree Feedback Conflict
-                      </span>
+                      <span className="text-[10px] font-bold text-amber-700 uppercase">360-Degree Feedback Conflict</span>
                     </div>
                     <div className="p-3 grid grid-cols-2 gap-4">
                       <div>
-                        <span className="block text-[8px] text-slate-400 uppercase font-bold mb-1">
-                          Leader Rating
-                        </span>
+                        <span className="block text-[8px] text-slate-400 uppercase font-bold mb-1">Leader Rating</span>
                         <div className="flex gap-0.5 items-center">
-                          <span className="font-bold text-green-600 text-sm mr-2">
-                            4.8
-                          </span>
-                          {[1, 2, 3, 4, 5].map((n) => (
-                            <div
-                              key={n}
-                              className="h-1.5 w-full rounded-full bg-green-400"
-                            ></div>
+                          <span className="font-bold text-green-600 text-sm mr-2">4.8</span>
+                          {[1,2,3,4,5].map((n) => (
+                            <div key={n} className="h-1.5 w-full rounded-full bg-green-400"></div>
                           ))}
                         </div>
                       </div>
                       <div>
-                        <span className="block text-[8px] text-slate-400 uppercase font-bold mb-1">
-                          Self Rating (Burnout)
-                        </span>
+                        <span className="block text-[8px] text-slate-400 uppercase font-bold mb-1">Self Rating (Burnout)</span>
                         <div className="flex gap-0.5 items-center">
-                          <span className="font-bold text-red-500 text-sm mr-2">
-                            2.1
-                          </span>
-                          {[1, 2, 3, 4, 5].map((n) => (
-                            <div
-                              key={n}
-                              className={`h-1.5 w-full rounded-full ${n <= 2 ? "bg-red-400" : "bg-slate-200"}`}
-                            ></div>
+                          <span className="font-bold text-red-500 text-sm mr-2">2.1</span>
+                          {[1,2,3,4,5].map((n) => (
+                            <div key={n} className={`h-1.5 w-full rounded-full ${n <= 2 ? "bg-red-400" : "bg-slate-200"}`}></div>
                           ))}
                         </div>
                       </div>
                     </div>
                     <div className="px-3 pb-3 pt-0 mt-2">
                       <p className="text-[10px] text-slate-600 italic border-l-2 border-amber-300 pl-2">
-                        <strong>Consultant Insight:</strong> "Despite perfect
-                        KPIs and leader praise, self-assessments indicate severe
-                        burnout. High output is currently sustained at the cost
-                        of team retention."
+                        <strong>Consultant Insight:</strong> "Despite perfect KPIs and leader praise,
+                        self-assessments indicate severe burnout. High output is currently sustained
+                        at the cost of team retention."
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+            */}
           </div>
         </div>
 
