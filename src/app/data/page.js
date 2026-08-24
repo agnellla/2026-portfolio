@@ -83,8 +83,8 @@ export default function DataPage() {
                     </span>
                   </div>
                   <p className="text-xs font-bold tracking-widest text-purple-500 uppercase mb-6">
-                    Solo Build · AI Job-Search Assistant · Next.js · PostgreSQL ·
-                    Gemini · Browser Extension
+                    Solo Build · AI Job-Search Agent · Next.js · PostgreSQL ·
+                    Gemini · Browser Extension · Scheduled Ingestion
                   </p>
 
                   <div className="space-y-6 relative">
@@ -97,16 +97,18 @@ export default function DataPage() {
                       </div>
                       <div>
                         <h4 className="font-bold text-slate-800 text-sm">
-                          A Fact Bank the AI Cannot Escape
+                          It Goes Looking, and Scores Before It Stores
                         </h4>
                         <p className="text-slate-500 text-sm mt-1">
-                          Every AI resume tool I tried invented things about me —
-                          a title I never held, a number I never hit. So the
-                          model here only ever sees short facts the user has
-                          confirmed, and may reorder and rephrase them but never
-                          add. Employers, job titles, dates and schools are
-                          placed into the document straight from the database,
-                          so the model is never the thing that writes them.
+                          Greenhouse, Lever and Ashby publish an open feed per
+                          company, so the app watches the boards I care about and
+                          checks them nightly. Three companies returned 806 live
+                          postings in testing. Storing all of those and
+                          summarising each with a model would be hundreds of rows
+                          and hundreds of API calls a day, so scoring runs first,
+                          on plain deterministic code. The ninety percent that
+                          were never relevant are discarded for free, and the
+                          nightly sweep makes zero model calls.
                         </p>
                       </div>
                     </div>
@@ -118,18 +120,16 @@ export default function DataPage() {
                       </div>
                       <div>
                         <h4 className="font-bold text-slate-800 text-sm">
-                          The Metric That Was Quietly Backwards
+                          One Press, and It Cannot Invent
                         </h4>
                         <p className="text-slate-500 text-sm mt-1">
-                          My first funnel counted applications by their current
-                          status — so an application that reached interview and
-                          was then rejected counted only as{" "}
-                          <em>rejected</em>. The interview count fell every time
-                          an interview went badly. Nothing errored; the number
-                          was just wrong. Stage counts now come from an
-                          append-only history table, and every rate excludes
-                          drafts so preparing carefully cannot drag the numbers
-                          down.
+                          One button tailors a resume and writes a cover letter
+                          for the chosen role, then hands both back for approval.
+                          The model only ever sees short facts I have confirmed
+                          about myself, and may reorder and rephrase them but
+                          never add. Employers, titles, dates and schools go into
+                          the document straight from the database, so the model
+                          is never the thing that writes them.
                         </p>
                       </div>
                     </div>
@@ -141,16 +141,17 @@ export default function DataPage() {
                       </div>
                       <div>
                         <h4 className="font-bold text-slate-800 text-sm">
-                          Designing What It Says When It Cannot Help
+                          The Metric That Was Quietly Backwards
                         </h4>
                         <p className="text-slate-500 text-sm mt-1">
-                          A response rate with nothing sent shows an em-dash, not
-                          0% — you have not failed, you have not started. Two
-                          resume versions are not ranked until each has five sent
-                          applications. An application question the fact bank
-                          cannot support returns no answer at all. Most of the
-                          design work went into the states where the product has
-                          nothing useful to say.
+                          My first funnel counted applications by their current
+                          status, so one that reached interview and was then
+                          rejected counted only as rejected. The interview count
+                          fell every time an interview went badly. Nothing
+                          errored; the number was simply wrong. Stage counts now
+                          come from an append-only history table, and every rate
+                          excludes drafts, so preparing carefully cannot drag the
+                          numbers down.
                         </p>
                       </div>
                     </div>
@@ -214,13 +215,13 @@ export default function DataPage() {
 
                   <div className="grid grid-cols-3 gap-3">
                     <div className="bg-slate-50 border border-slate-200 rounded-xl p-3 text-center">
-                      <p className="text-lg font-bold text-purple-600">19</p>
+                      <p className="text-lg font-bold text-purple-600">21</p>
                       <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wide mt-0.5">
                         Decisions Recorded
                       </p>
                     </div>
                     <div className="bg-slate-50 border border-slate-200 rounded-xl p-3 text-center">
-                      <p className="text-lg font-bold text-purple-600">265</p>
+                      <p className="text-lg font-bold text-purple-600">283</p>
                       <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wide mt-0.5">
                         Automated Tests
                       </p>
@@ -250,7 +251,7 @@ export default function DataPage() {
                       <span className="font-bold text-slate-800">
                         I cannot yet tell you it helps.
                       </span>{" "}
-                      The 265 tests prove the scoring maths, the fabrication
+                      The 283 tests prove the scoring maths, the fabrication
                       checker and the metric definitions are right — not that any
                       of it gets someone an interview. Nobody has used it but me.
                       The next step is my own job search: real applications
