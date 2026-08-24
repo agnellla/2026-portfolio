@@ -288,15 +288,12 @@ export default function DataPage() {
                       </div>
                       <div>
                         <h4 className="font-bold text-slate-800 text-sm">
-                          Two Kinds of Data, One Dashboard
+                          The Numbers Said Everything Was Fine
                         </h4>
                         <p className="text-slate-500 text-sm mt-1">
-                          Built centralised tracking for 110+ members across 9
-                          departments, deliberately putting hard KPIs and
-                          360-degree feedback side by side. Most reporting keeps
-                          those apart — performance in one deck, morale in
-                          another — which is exactly how a team can look healthy
-                          and be in trouble.
+                          I tracked attendance and performance for 110+ members
+                          across 9 departments. Read on its own, the dashboard
+                          showed a healthy organisation hitting its targets.
                         </p>
                       </div>
                     </div>
@@ -307,15 +304,14 @@ export default function DataPage() {
                       </div>
                       <div>
                         <h4 className="font-bold text-slate-800 text-sm">
-                          Green Outside, Red Inside
+                          So I Asked the Members
                         </h4>
                         <p className="text-slate-500 text-sm mt-1">
-                          Some of the strongest departments on paper were the
-                          ones whose members rated their own workload and
-                          wellbeing worst. The KPIs were not wrong — they were
-                          measuring output, and output was being sustained by
-                          burning the team down. On dashboards alone those units
-                          read as success stories.
+                          Numbers tell you what happened, not what it cost. I
+                          went to the people producing them. Some of the
+                          strongest departments on paper turned out to be the
+                          ones running hardest on their own team, which no KPI
+                          was ever going to show.
                         </p>
                       </div>
                     </div>
@@ -326,60 +322,34 @@ export default function DataPage() {
                       </div>
                       <div>
                         <h4 className="font-bold text-slate-800 text-sm">
-                          Reported as Flight Risk, Not as Praise
+                          Briefed Every Department Head, and the President
                         </h4>
                         <p className="text-slate-500 text-sm mt-1">
-                          Six monthly and two quarterly reports over the term,
-                          taken into internal workshops and performance reviews
-                          rather than stopping at a slide. Reframing a
-                          top-performing unit as a retention risk changed what
-                          leadership did about it. Engagement improved 15% across
-                          the term.
+                          A finding nobody owns changes nothing. I took it to
+                          each of the 9 department heads and to the president,
+                          with advice written for that department specifically
+                          and milestones they could actually implement.
+                          Engagement rose 15% across the term.
                         </p>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                {/* Right: the finding, in words — no chart, since no figures are published */}
+                {/* Right: the metaphor, once, briefly */}
                 <div className="w-full bg-slate-50 rounded-2xl border border-slate-200 p-6 shadow-inner flex flex-col gap-5">
                   <span className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">
-                    The finding
+                    Why a watermelon
                   </span>
 
                   <blockquote className="font-heading text-2xl leading-snug text-slate-800">
-                    The departments that looked strongest were the ones most
-                    likely to lose their people.
+                    Green on the outside. Red once you cut it open.
                   </blockquote>
 
-                  <div className="grid grid-cols-2 gap-3">
-                    <div className="bg-white rounded-xl border border-slate-100 p-4">
-                      <p className="text-[9px] font-bold uppercase tracking-widest text-green-600 mb-1.5">
-                        What we measured
-                      </p>
-                      <p className="text-sm font-bold text-slate-800">Output</p>
-                      <p className="text-xs text-slate-500 mt-1 leading-relaxed">
-                        Targets hit, deliverables shipped, deadlines met. All of
-                        it green.
-                      </p>
-                    </div>
-                    <div className="bg-white rounded-xl border border-slate-100 p-4">
-                      <p className="text-[9px] font-bold uppercase tracking-widest text-amber-600 mb-1.5">
-                        What nothing measured
-                      </p>
-                      <p className="text-sm font-bold text-slate-800">
-                        Whether it held
-                      </p>
-                      <p className="text-xs text-slate-500 mt-1 leading-relaxed">
-                        How much of that output was being paid for out of the
-                        team.
-                      </p>
-                    </div>
-                  </div>
-
-                  <p className="text-[11px] text-slate-600 italic border-l-2 border-amber-300 pl-3 leading-relaxed">
-                    Two questions, one dashboard. Reporting them together is the
-                    only reason the second one ever came up.
+                  <p className="text-sm text-slate-500 leading-relaxed">
+                    An organisation can hit every target it is measured on and
+                    still be in trouble underneath. The dashboard only ever
+                    showed the rind.
                   </p>
 
                   <div className="grid grid-cols-3 gap-3 mt-auto">
