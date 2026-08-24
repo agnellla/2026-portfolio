@@ -288,12 +288,13 @@ export default function DataPage() {
                       </div>
                       <div>
                         <h4 className="font-bold text-slate-800 text-sm">
-                          The Numbers Said Everything Was Fine
+                          Owned the Reporting for 110+ Members
                         </h4>
                         <p className="text-slate-500 text-sm mt-1">
-                          I tracked attendance and performance for 110+ members
-                          across 9 departments. Read on its own, the dashboard
-                          showed a healthy organisation hitting its targets.
+                          Attendance and performance across 9 departments, six
+                          monthly and two quarterly reports over one term. Read
+                          on its own, the dashboard showed a healthy
+                          organisation hitting its targets.
                         </p>
                       </div>
                     </div>
@@ -304,14 +305,13 @@ export default function DataPage() {
                       </div>
                       <div>
                         <h4 className="font-bold text-slate-800 text-sm">
-                          So I Asked the Members
+                          Went and Got the Missing Variable
                         </h4>
                         <p className="text-slate-500 text-sm mt-1">
-                          Numbers tell you what happened, not what it cost. I
-                          went to the people producing them. Some of the
-                          strongest departments on paper turned out to be the
-                          ones running hardest on their own team, which no KPI
-                          was ever going to show.
+                          The KPIs measured output. Nothing measured whether the
+                          output held. So I asked the members directly, and some
+                          of the strongest departments on paper turned out to be
+                          the ones running hardest on their own people.
                         </p>
                       </div>
                     </div>
@@ -336,76 +336,62 @@ export default function DataPage() {
                   </div>
                 </div>
 
-                {/* Right: the metaphor, once, briefly */}
-                <div className="w-full bg-slate-50 rounded-2xl border border-slate-200 p-6 shadow-inner flex flex-col gap-5">
-                  <span className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">
-                    Why a watermelon
-                  </span>
-
-                  <blockquote className="font-heading text-2xl leading-snug text-slate-800">
-                    Green on the outside. Red once you cut it open.
-                  </blockquote>
-
-                  <p className="text-sm text-slate-500 leading-relaxed">
-                    An organisation can hit every target it is measured on and
-                    still be in trouble underneath. The dashboard only ever
-                    showed the rind.
-                  </p>
-
-                  {/* The method: two inputs, one view, nine briefings. */}
-                  <div className="bg-white rounded-xl border border-slate-100 p-4">
-                    <p className="text-[9px] font-bold uppercase tracking-widest text-slate-400 mb-3">
-                      How it worked
-                    </p>
-
-                    <div className="grid grid-cols-2 gap-2">
-                      <div className="rounded-lg bg-purple-50 border border-purple-100 px-2 py-2 text-center">
-                        <p className="text-[10px] font-bold text-purple-700 leading-tight">
-                          Performance data
-                        </p>
-                        <p className="text-[9px] text-purple-400 mt-0.5">what happened</p>
-                      </div>
-                      <div className="rounded-lg bg-amber-50 border border-amber-100 px-2 py-2 text-center">
-                        <p className="text-[10px] font-bold text-amber-700 leading-tight">
-                          What members said
-                        </p>
-                        <p className="text-[9px] text-amber-500 mt-0.5">what it cost</p>
-                      </div>
-                    </div>
-
-                    <div className="flex justify-center py-2">
-                      <div className="w-px h-4 bg-slate-200"></div>
-                    </div>
-
-                    <div className="rounded-lg bg-slate-900 px-3 py-2 text-center">
-                      <p className="text-[10px] font-bold text-white">
-                        One view per department
-                      </p>
-                    </div>
-
-                    <div className="flex justify-center py-2">
-                      <div className="w-px h-4 bg-slate-200"></div>
-                    </div>
-
-                    <div className="flex items-end justify-center gap-1.5">
-                      {Array.from({ length: 9 }).map((_, i) => (
-                        <div
-                          key={i}
-                          className="w-4 h-6 rounded-sm bg-purple-300"
-                          title="Department head"
-                        ></div>
-                      ))}
-                      <div className="w-px h-6 bg-slate-200 mx-1"></div>
-                      <div
-                        className="w-4 h-8 rounded-sm bg-slate-900"
-                        title="President"
-                      ></div>
-                    </div>
-                    <p className="text-[9px] text-center text-slate-400 mt-2 leading-relaxed">
-                      9 department heads briefed individually, plus the
-                      president. Advice and milestones written per department.
+                {/* Right: the finding as a quadrant — a framework, not a dataset.
+                    No points are plotted, because the underlying figures are not published. */}
+                <div className="w-full bg-slate-50 rounded-2xl border border-slate-200 p-6 shadow-inner flex flex-col gap-4">
+                  <div>
+                    <span className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">
+                      Two questions, two sources
+                    </span>
+                    <p className="font-heading text-xl text-slate-800 mt-1 leading-snug">
+                      Only one quadrant is invisible on a dashboard
                     </p>
                   </div>
+
+                  <div>
+                    <p className="text-[9px] font-bold uppercase tracking-widest text-amber-600 mb-1.5">
+                      Sustainable, per the members
+                    </p>
+                    <div className="grid grid-cols-2 gap-1.5">
+                      <div className="rounded-lg bg-white border border-slate-200 p-3 min-h-[74px] flex flex-col justify-center">
+                        <p className="text-[11px] font-bold text-slate-700">Coasting</p>
+                        <p className="text-[9px] text-slate-400 mt-0.5 leading-snug">
+                          Team fine, targets missed
+                        </p>
+                      </div>
+                      <div className="rounded-lg bg-green-50 border border-green-200 p-3 min-h-[74px] flex flex-col justify-center">
+                        <p className="text-[11px] font-bold text-green-700">Genuinely healthy</p>
+                        <p className="text-[9px] text-green-600/70 mt-0.5 leading-snug">
+                          Targets met, and it holds
+                        </p>
+                      </div>
+                      <div className="rounded-lg bg-white border border-slate-200 p-3 min-h-[74px] flex flex-col justify-center">
+                        <p className="text-[11px] font-bold text-slate-700">Visibly struggling</p>
+                        <p className="text-[9px] text-slate-400 mt-0.5 leading-snug">
+                          Already showing in the numbers
+                        </p>
+                      </div>
+                      <div className="rounded-lg bg-red-50 border-2 border-red-300 p-3 min-h-[74px] flex flex-col justify-center">
+                        <p className="text-[11px] font-bold text-red-700">Watermelon</p>
+                        <p className="text-[9px] text-red-500 mt-0.5 leading-snug">
+                          Targets met, paid for out of the team
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex justify-between mt-1.5">
+                      <p className="text-[9px] text-slate-400 font-bold">low</p>
+                      <p className="text-[9px] font-bold uppercase tracking-widest text-purple-600">
+                        Performance, per the KPIs
+                      </p>
+                      <p className="text-[9px] text-slate-400 font-bold">high</p>
+                    </div>
+                  </div>
+
+                  <p className="text-[11px] text-slate-600 italic border-l-2 border-red-300 pl-3 leading-relaxed">
+                    Three of these show up in the reporting on their own. The
+                    fourth looks exactly like the healthy one until you ask the
+                    members, which is why the qualitative half was not optional.
+                  </p>
 
                   <div className="grid grid-cols-3 gap-3 mt-auto">
                     <div className="bg-white border border-slate-200 rounded-xl p-3 text-center">
