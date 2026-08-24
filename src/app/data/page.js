@@ -341,39 +341,45 @@ export default function DataPage() {
                   </div>
                 </div>
 
-                {/* Right: the idea, illustrated — no figures, none are published */}
+                {/* Right: the finding, in words — no chart, since no figures are published */}
                 <div className="w-full bg-slate-50 rounded-2xl border border-slate-200 p-6 shadow-inner flex flex-col gap-5">
-                  <div>
-                    <span className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">
-                      The pattern
-                    </span>
-                    <p className="text-sm font-bold text-slate-800 mt-0.5">
-                      Green on the outside, red on the inside
-                    </p>
-                  </div>
+                  <span className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">
+                    The finding
+                  </span>
 
-                  <div className="flex items-center justify-center py-2">
-                    <div className="relative w-40 h-40 rounded-full bg-green-400/80 flex items-center justify-center shadow-inner">
-                      <div className="w-[86%] h-[86%] rounded-full bg-white/90 flex items-center justify-center">
-                        <div className="w-[86%] h-[86%] rounded-full bg-red-400/80 flex items-center justify-center">
-                          <span className="text-[10px] font-bold text-white uppercase tracking-widest text-center leading-tight px-2">
-                            Wellbeing
-                            <br />
-                            self-rated
-                          </span>
-                        </div>
-                      </div>
-                      <span className="absolute -top-2 left-1/2 -translate-x-1/2 bg-white px-2 py-0.5 rounded-full text-[9px] font-bold text-green-700 uppercase tracking-widest border border-green-200 shadow-sm">
-                        KPIs on target
-                      </span>
+                  <blockquote className="font-heading text-2xl leading-snug text-slate-800">
+                    The departments that looked strongest were the ones most
+                    likely to lose their people.
+                  </blockquote>
+
+                  <div className="grid grid-cols-2 gap-3">
+                    <div className="bg-white rounded-xl border border-slate-100 p-4">
+                      <p className="text-[9px] font-bold uppercase tracking-widest text-green-600 mb-1.5">
+                        What we measured
+                      </p>
+                      <p className="text-sm font-bold text-slate-800">Output</p>
+                      <p className="text-xs text-slate-500 mt-1 leading-relaxed">
+                        Targets hit, deliverables shipped, deadlines met. All of
+                        it green.
+                      </p>
+                    </div>
+                    <div className="bg-white rounded-xl border border-slate-100 p-4">
+                      <p className="text-[9px] font-bold uppercase tracking-widest text-amber-600 mb-1.5">
+                        What nothing measured
+                      </p>
+                      <p className="text-sm font-bold text-slate-800">
+                        Whether it held
+                      </p>
+                      <p className="text-xs text-slate-500 mt-1 leading-relaxed">
+                        How much of that output was being paid for out of the
+                        team.
+                      </p>
                     </div>
                   </div>
 
                   <p className="text-[11px] text-slate-600 italic border-l-2 border-amber-300 pl-3 leading-relaxed">
-                    <strong>The finding:</strong> a department can hit every
-                    number it is measured on and still be the one most likely to
-                    lose its people. Output and sustainability are different
-                    questions, and only one of them was on the dashboard.
+                    Two questions, one dashboard. Reporting them together is the
+                    only reason the second one ever came up.
                   </p>
 
                   <div className="grid grid-cols-3 gap-3 mt-auto">
