@@ -66,22 +66,25 @@ export default function DataPage() {
           </h2>
 
           <div className="flex flex-col gap-8">
-            {/* ── PROJECT 1: DigiReady ───────────────────────────────── */}
+            {/* ── PROJECT 1: CareerCopilot ───────────────────────────── */}
             <div className="group bg-white rounded-[2.5rem] p-8 md:p-10 border border-slate-100 shadow-sm hover:shadow-2xl hover:shadow-purple-100 transition-all duration-500">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
                 {/* Left: Narrative */}
                 <div>
                   <div className="flex items-center gap-2 mb-2">
                     <h3 className="font-heading text-3xl text-slate-800">
-                      DigiReady
+                      CareerCopilot
                     </h3>
+                    <span className="text-[10px] bg-slate-100 text-slate-600 px-2 py-1 rounded-full font-bold uppercase tracking-wide">
+                      Aug 2026
+                    </span>
                     <span className="text-[10px] bg-purple-100 text-purple-700 px-2 py-1 rounded-full font-bold uppercase tracking-wide">
-                      Live Project
+                      Live
                     </span>
                   </div>
                   <p className="text-xs font-bold tracking-widest text-purple-500 uppercase mb-6">
-                    Data & AI Engineer · SME Digital Readiness · React · FastAPI
-                    · PostgreSQL
+                    Solo Build · AI Job-Search Assistant · Next.js · PostgreSQL ·
+                    Gemini · Browser Extension
                   </p>
 
                   <div className="space-y-6 relative">
@@ -94,17 +97,16 @@ export default function DataPage() {
                       </div>
                       <div>
                         <h4 className="font-bold text-slate-800 text-sm">
-                          Benchmark Data Engineering
+                          A Fact Bank the AI Cannot Escape
                         </h4>
                         <p className="text-slate-500 text-sm mt-1">
-                          IMDA publishes SME data at an aggregate level — not
-                          broken down by pillar or industry. I synthesised the
-                          Digital Index 2023, EDB readiness reports, and SME
-                          Scorecard into usable pillar-level medians per
-                          industry, stored in PostgreSQL as live benchmarks.
-                          These are designed to be replaced by real user data
-                          post-launch, creating a self-improving dataset over
-                          time.
+                          Every AI resume tool I tried invented things about me —
+                          a title I never held, a number I never hit. So the
+                          model here only ever sees short facts the user has
+                          confirmed, and may reorder and rephrase them but never
+                          add. Employers, job titles, dates and schools are
+                          placed into the document straight from the database,
+                          so the model is never the thing that writes them.
                         </p>
                       </div>
                     </div>
@@ -112,21 +114,22 @@ export default function DataPage() {
                     {/* Step 2 */}
                     <div className="relative flex gap-4">
                       <div className="w-10 h-10 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center shrink-0 border-4 border-white shadow-sm z-10">
-                        <BrainCircuit size={18} />
+                        <BarChart3 size={18} />
                       </div>
                       <div>
                         <h4 className="font-bold text-slate-800 text-sm">
-                          Deterministic Scoring + Constrained AI
+                          The Metric That Was Quietly Backwards
                         </h4>
                         <p className="text-slate-500 text-sm mt-1">
-                          Pillar weights (Ops 25%, CX 20%, Data 20%, Cyber 20%,
-                          Cloud 15%) are calibrated to ASEAN SME transformation
-                          priorities, not arbitrary. The scoring engine is fully
-                          deterministic in FastAPI — Gemini 1.5 Flash is
-                          constrained to writing plain-English justifications
-                          for pre-selected actions only. It cannot alter scores
-                          or surface anything outside a validated 30-action
-                          library.
+                          My first funnel counted applications by their current
+                          status — so an application that reached interview and
+                          was then rejected counted only as{" "}
+                          <em>rejected</em>. The interview count fell every time
+                          an interview went badly. Nothing errored; the number
+                          was just wrong. Stage counts now come from an
+                          append-only history table, and every rate excludes
+                          drafts so preparing carefully cannot drag the numbers
+                          down.
                         </p>
                       </div>
                     </div>
@@ -138,35 +141,51 @@ export default function DataPage() {
                       </div>
                       <div>
                         <h4 className="font-bold text-slate-800 text-sm">
-                          Impact: 30× Faster, 10× Scale
+                          Designing What It Says When It Cannot Help
                         </h4>
                         <p className="text-slate-500 text-sm mt-1">
-                          Reduces SME diagnosis from 2–3 consultant days to
-                          under 15 minutes. Advisor capacity scales from ~30 to
-                          ~300 SMEs per year, with PSG/EDG grant matching fully
-                          automated — validated across 5 SME owner interviews
-                          averaging 11 minutes to complete.
+                          A response rate with nothing sent shows an em-dash, not
+                          0% — you have not failed, you have not started. Two
+                          resume versions are not ranked until each has five sent
+                          applications. An application question the fact bank
+                          cannot support returns no answer at all. Most of the
+                          design work went into the states where the product has
+                          nothing useful to say.
                         </p>
                       </div>
                     </div>
                   </div>
                   <div className="mt-6 flex gap-3">
                     <a
-                      href="/data/digiready.pdf"
+                      href="/data/careercopilot.pdf"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="px-5 py-2.5 bg-slate-900 text-white rounded-xl text-sm font-bold shadow-lg shadow-purple-200/50 hover:bg-purple-600 transition-colors inline-block text-center"
                     >
-                      View Pitch Deck
+                      View Case Study
+                    </a>
+                    <a
+                      href="https://careercopilot-eta.vercel.app"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-5 py-2.5 bg-white text-slate-700 border border-slate-200 rounded-xl text-sm font-bold hover:border-purple-300 hover:text-purple-600 transition-colors inline-block text-center"
+                    >
+                      Live App
+                    </a>
+                    <a
+                      href="https://github.com/agnellla/careercopilot"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-5 py-2.5 bg-white text-slate-700 border border-slate-200 rounded-xl text-sm font-bold hover:border-purple-300 hover:text-purple-600 transition-colors inline-block text-center"
+                    >
+                      GitHub
                     </a>
                   </div>
                 </div>
 
-                {/* Right: Video */}
+                {/* Right: Demo + evidence */}
                 <div className="w-full flex flex-col gap-4">
-                  {/* Browser chrome + video */}
                   <div className="rounded-2xl border border-slate-200 overflow-hidden shadow-sm bg-white">
-                    {/* Fake browser bar */}
                     <div className="bg-slate-100 px-4 py-2.5 flex items-center gap-2 border-b border-slate-200">
                       <div className="flex gap-1.5">
                         <div className="w-2.5 h-2.5 rounded-full bg-red-300"></div>
@@ -174,205 +193,211 @@ export default function DataPage() {
                         <div className="w-2.5 h-2.5 rounded-full bg-green-300"></div>
                       </div>
                       <div className="flex-1 bg-white rounded-md px-3 py-1 text-[10px] text-slate-400 font-mono border border-slate-200">
-                        digiready.app/diagnostic
+                        careercopilot-eta.vercel.app
                       </div>
                     </div>
-
-                    {/* Video — 2880×1800 → aspect ratio 8:5 (1.6:1) */}
-                    <div className="relative w-full" style={{ aspectRatio: "8/5" }}>
-                      <video
-                        className="absolute inset-0 w-full h-full object-cover"
-                        src="/data/digiready.mp4"
-                        autoPlay
-                        muted
-                        loop
-                        playsInline
-                      />
+                    {/* TODO: drop a screen recording at /public/data/careercopilot.mp4 */}
+                    <div
+                      className="relative w-full bg-slate-50 flex items-center justify-center"
+                      style={{ aspectRatio: "8/5" }}
+                    >
+                      <a
+                        href="https://careercopilot-eta.vercel.app"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[11px] text-slate-400 font-mono hover:text-purple-600 transition-colors"
+                      >
+                        careercopilot-eta.vercel.app →
+                      </a>
                     </div>
                   </div>
 
-                  {/* Stat strip below video */}
                   <div className="grid grid-cols-3 gap-3">
                     <div className="bg-slate-50 border border-slate-200 rounded-xl p-3 text-center">
-                      <p className="text-lg font-bold text-purple-600">30×</p>
+                      <p className="text-lg font-bold text-purple-600">19</p>
                       <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wide mt-0.5">
-                        Faster Diagnosis
+                        Decisions Recorded
                       </p>
                     </div>
                     <div className="bg-slate-50 border border-slate-200 rounded-xl p-3 text-center">
-                      <p className="text-lg font-bold text-purple-600">10×</p>
+                      <p className="text-lg font-bold text-purple-600">265</p>
                       <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wide mt-0.5">
-                        Advisor Scale
+                        Automated Tests
                       </p>
                     </div>
                     <div className="bg-slate-50 border border-slate-200 rounded-xl p-3 text-center">
-                      <p className="text-lg font-bold text-purple-600">11m</p>
+                      <p className="text-lg font-bold text-purple-600">$0</p>
                       <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wide mt-0.5">
-                        Avg. Completion
+                        To Run Monthly
                       </p>
                     </div>
                   </div>
 
-                  {/* AI design principle */}
                   <div className="bg-white rounded-xl border border-slate-100 p-3">
                     <p className="text-[10px] text-slate-600 italic border-l-2 border-purple-300 pl-2">
-                      <strong>Design principle:</strong> "AI generates language,
-                      not logic. Logic lives in the scoring engine. Removing the
-                      LLM degrades explanation quality — not recommendation
-                      quality."
+                      <strong>Design principle:</strong> "A refusal is a correct
+                      output, not a bug. If the evidence cannot support an
+                      answer, the honest response is to say so."
                     </p>
                   </div>
+
                   <div className="bg-slate-50 border border-slate-200 rounded-2xl p-4 space-y-3">
                     <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">
-                      Key Design Decision
+                      What I Have Not Shown
                     </p>
                     <p className="text-sm text-slate-600 leading-relaxed">
-                      The hardest call was{" "}
+                      It works, but{" "}
                       <span className="font-bold text-slate-800">
-                        keeping the AI out of the logic layer entirely.
+                        I cannot yet tell you it helps.
                       </span>{" "}
-                      Early prototypes let the LLM generate recommendations
-                      freely — outputs were fluent but unpredictable. I moved
-                      all scoring and action selection into a rule engine,
-                      leaving Gemini responsible only for language. The result:
-                      removing the LLM degrades explanation quality, not
-                      recommendation quality. That separation is what makes the
-                      output trustworthy enough for real grant decisions.
+                      The 265 tests prove the scoring maths, the fabrication
+                      checker and the metric definitions are right — not that any
+                      of it gets someone an interview. Nobody has used it but me.
+                      The next step is my own job search: real applications
+                      through it, then read the numbers back.
                     </p>
                   </div>
                 </div>
               </div>
             </div>
-
-            {/* ── PROJECT 2: Organizational Performance Audit ────────── */}
-            {/* NOTE: Commented out — AIESEC deck not ready yet. Uncomment when deck is complete.
+            {/* ── PROJECT 2: AIESEC People Analytics ──────────────────── */}
             <div className="group bg-white rounded-[2.5rem] p-8 md:p-10 border border-slate-100 shadow-sm hover:shadow-2xl hover:shadow-purple-100 transition-all duration-500">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+                {/* Left: Narrative */}
                 <div>
-                  <h3 className="font-heading text-3xl text-slate-800 mb-2">
-                    Organizational Performance Audit
-                  </h3>
+                  <div className="flex items-center gap-2 mb-2">
+                    <h3 className="font-heading text-3xl text-slate-800">
+                      The Watermelon Effect
+                    </h3>
+                    <span className="text-[10px] bg-slate-100 text-slate-600 px-2 py-1 rounded-full font-bold uppercase tracking-wide">
+                      Feb–Jul 2025
+                    </span>
+                  </div>
                   <p className="text-xs font-bold tracking-widest text-purple-500 uppercase mb-6">
-                    Data Analyst & Consultant • AIESEC (110+ Members)
+                    People Analyst &amp; Consultant Manager · AIESEC in Surabaya ·
+                    110+ Members · 9 Departments
                   </p>
+
                   <div className="space-y-6 relative">
                     <div className="absolute left-[19px] top-2 bottom-2 w-0.5 bg-slate-100"></div>
+
                     <div className="relative flex gap-4">
                       <div className="w-10 h-10 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center shrink-0 border-4 border-white shadow-sm z-10">
                         <BarChart3 size={18} />
                       </div>
                       <div>
-                        <h4 className="font-bold text-slate-800 text-sm">Data Aggregation & Modeling</h4>
+                        <h4 className="font-bold text-slate-800 text-sm">
+                          Two Kinds of Data, One Dashboard
+                        </h4>
                         <p className="text-slate-500 text-sm mt-1">
-                          Engineered a centralized tracking dashboard to aggregate quantitative KPIs
-                          alongside qualitative 360-degree feedback across 9 departments.
+                          Built centralised tracking for 110+ members across 9
+                          departments, deliberately putting hard KPIs and
+                          360-degree feedback side by side. Most reporting keeps
+                          those apart — performance in one deck, morale in
+                          another — which is exactly how a team can look healthy
+                          and be in trouble.
                         </p>
                       </div>
                     </div>
+
                     <div className="relative flex gap-4">
                       <div className="w-10 h-10 rounded-full bg-amber-50 text-amber-600 flex items-center justify-center shrink-0 border-4 border-white shadow-sm z-10">
                         <SearchCheck size={18} />
                       </div>
                       <div>
-                        <h4 className="font-bold text-slate-800 text-sm">Root Cause Analysis</h4>
+                        <h4 className="font-bold text-slate-800 text-sm">
+                          Green Outside, Red Inside
+                        </h4>
                         <p className="text-slate-500 text-sm mt-1">
-                          Cross-referenced metrics to uncover hidden operational bottlenecks.
-                          Identified that top-line performance was masking severe burnout in key units.
+                          Some of the strongest departments on paper were the
+                          ones whose members rated their own workload and
+                          wellbeing worst. The KPIs were not wrong — they were
+                          measuring output, and output was being sustained by
+                          burning the team down. On dashboards alone those units
+                          read as success stories.
                         </p>
                       </div>
                     </div>
+
                     <div className="relative flex gap-4">
                       <div className="w-10 h-10 rounded-full bg-green-50 text-green-600 flex items-center justify-center shrink-0 border-4 border-white shadow-sm z-10">
                         <Presentation size={18} />
                       </div>
                       <div>
-                        <h4 className="font-bold text-slate-800 text-sm">Strategic Implementation</h4>
+                        <h4 className="font-bold text-slate-800 text-sm">
+                          Reported as Flight Risk, Not as Praise
+                        </h4>
                         <p className="text-slate-500 text-sm mt-1">
-                          Presented data-driven "State of the Organization" reports to executive
-                          leadership, providing tailored strategies to optimize performance and reduce turnover.
+                          Six monthly and two quarterly reports over the term,
+                          taken into internal workshops and performance reviews
+                          rather than stopping at a slide. Reframing a
+                          top-performing unit as a retention risk changed what
+                          leadership did about it. Engagement improved 15% across
+                          the term.
                         </p>
                       </div>
                     </div>
                   </div>
-                  <div className="mt-6 flex gap-3">
-                    <button className="px-5 py-2.5 bg-slate-900 text-white rounded-xl text-sm font-bold shadow-lg shadow-purple-200/50 hover:bg-purple-600 transition-colors">
-                      View Pitch Deck
-                    </button>
-                  </div>
                 </div>
-                <div className="w-full bg-slate-50 rounded-2xl border border-slate-200 p-5 relative shadow-inner flex flex-col gap-4">
-                  <div className="flex justify-between items-center bg-white p-3 rounded-xl border border-slate-100 shadow-sm">
-                    <div className="flex flex-col">
-                      <span className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Data Insight Snapshot</span>
-                      <span className="text-sm font-bold text-slate-800">The "Watermelon" Effect</span>
-                    </div>
-                    <span className="bg-red-50 text-red-600 text-[10px] font-bold px-2 py-1 rounded">High Flight Risk</span>
+
+                {/* Right: the idea, illustrated — no figures, none are published */}
+                <div className="w-full bg-slate-50 rounded-2xl border border-slate-200 p-6 shadow-inner flex flex-col gap-5">
+                  <div>
+                    <span className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">
+                      The pattern
+                    </span>
+                    <p className="text-sm font-bold text-slate-800 mt-0.5">
+                      Green on the outside, red on the inside
+                    </p>
                   </div>
-                  <div className="bg-white rounded-xl border border-slate-100 overflow-hidden">
-                    <div className="bg-purple-50 px-3 py-2 border-b border-purple-100 flex justify-between">
-                      <span className="text-[10px] font-bold text-purple-700 uppercase">Marketing Dept. Metrics</span>
-                    </div>
-                    <table className="w-full text-[10px] text-left">
-                      <thead className="text-slate-400 border-b border-slate-50">
-                        <tr>
-                          <th className="p-2 pl-3 font-normal">Metric</th>
-                          <th className="p-2 font-normal">Goal</th>
-                          <th className="p-2 font-normal">Actual</th>
-                          <th className="p-2 font-normal text-right">Status</th>
-                        </tr>
-                      </thead>
-                      <tbody className="divide-y divide-slate-50">
-                        <tr>
-                          <td className="p-2 pl-3 font-bold text-slate-700">Content KPI</td>
-                          <td className="p-2 text-slate-500">12</td>
-                          <td className="p-2 text-slate-500">12</td>
-                          <td className="p-2 text-right font-bold text-green-600">100%</td>
-                        </tr>
-                        <tr>
-                          <td className="p-2 pl-3 font-bold text-slate-700">Lead Gen KPI</td>
-                          <td className="p-2 text-slate-500">50</td>
-                          <td className="p-2 text-slate-500">48</td>
-                          <td className="p-2 text-right font-bold text-green-600">96%</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                  <div className="bg-white rounded-xl border border-slate-100 overflow-hidden">
-                    <div className="bg-amber-50 px-3 py-2 border-b border-amber-100 flex justify-between">
-                      <span className="text-[10px] font-bold text-amber-700 uppercase">360-Degree Feedback Conflict</span>
-                    </div>
-                    <div className="p-3 grid grid-cols-2 gap-4">
-                      <div>
-                        <span className="block text-[8px] text-slate-400 uppercase font-bold mb-1">Leader Rating</span>
-                        <div className="flex gap-0.5 items-center">
-                          <span className="font-bold text-green-600 text-sm mr-2">4.8</span>
-                          {[1,2,3,4,5].map((n) => (
-                            <div key={n} className="h-1.5 w-full rounded-full bg-green-400"></div>
-                          ))}
+
+                  <div className="flex items-center justify-center py-2">
+                    <div className="relative w-40 h-40 rounded-full bg-green-400/80 flex items-center justify-center shadow-inner">
+                      <div className="w-[86%] h-[86%] rounded-full bg-white/90 flex items-center justify-center">
+                        <div className="w-[86%] h-[86%] rounded-full bg-red-400/80 flex items-center justify-center">
+                          <span className="text-[10px] font-bold text-white uppercase tracking-widest text-center leading-tight px-2">
+                            Wellbeing
+                            <br />
+                            self-rated
+                          </span>
                         </div>
                       </div>
-                      <div>
-                        <span className="block text-[8px] text-slate-400 uppercase font-bold mb-1">Self Rating (Burnout)</span>
-                        <div className="flex gap-0.5 items-center">
-                          <span className="font-bold text-red-500 text-sm mr-2">2.1</span>
-                          {[1,2,3,4,5].map((n) => (
-                            <div key={n} className={`h-1.5 w-full rounded-full ${n <= 2 ? "bg-red-400" : "bg-slate-200"}`}></div>
-                          ))}
-                        </div>
-                      </div>
+                      <span className="absolute -top-2 left-1/2 -translate-x-1/2 bg-white px-2 py-0.5 rounded-full text-[9px] font-bold text-green-700 uppercase tracking-widest border border-green-200 shadow-sm">
+                        KPIs on target
+                      </span>
                     </div>
-                    <div className="px-3 pb-3 pt-0 mt-2">
-                      <p className="text-[10px] text-slate-600 italic border-l-2 border-amber-300 pl-2">
-                        <strong>Consultant Insight:</strong> "Despite perfect KPIs and leader praise,
-                        self-assessments indicate severe burnout. High output is currently sustained
-                        at the cost of team retention."
+                  </div>
+
+                  <p className="text-[11px] text-slate-600 italic border-l-2 border-amber-300 pl-3 leading-relaxed">
+                    <strong>The finding:</strong> a department can hit every
+                    number it is measured on and still be the one most likely to
+                    lose its people. Output and sustainability are different
+                    questions, and only one of them was on the dashboard.
+                  </p>
+
+                  <div className="grid grid-cols-3 gap-3 mt-auto">
+                    <div className="bg-white border border-slate-200 rounded-xl p-3 text-center">
+                      <p className="text-lg font-bold text-purple-600">9</p>
+                      <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wide mt-0.5">
+                        Departments
+                      </p>
+                    </div>
+                    <div className="bg-white border border-slate-200 rounded-xl p-3 text-center">
+                      <p className="text-lg font-bold text-purple-600">8</p>
+                      <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wide mt-0.5">
+                        Reports
+                      </p>
+                    </div>
+                    <div className="bg-white border border-slate-200 rounded-xl p-3 text-center">
+                      <p className="text-lg font-bold text-purple-600">15%</p>
+                      <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wide mt-0.5">
+                        Engagement
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            */}
           </div>
         </div>
 
@@ -464,7 +489,7 @@ export default function DataPage() {
             <div className="mt-8 pt-6 border-t border-purple-200/50 space-y-2">
               <div className="flex items-center gap-2 text-xs text-purple-400 font-bold uppercase tracking-widest">
                 <Zap size={14} className="text-purple-400" />
-                Python & PostgreSQL applied in DigiReady (live)
+                PostgreSQL & Python applied in CareerCopilot (live)
               </div>
               <div className="flex items-center gap-2 text-xs text-purple-400 font-bold uppercase tracking-widest">
                 <CheckCircle2 size={14} /> Open to Consulting & Data Internships
