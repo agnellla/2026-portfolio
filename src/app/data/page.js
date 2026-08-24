@@ -352,6 +352,61 @@ export default function DataPage() {
                     showed the rind.
                   </p>
 
+                  {/* The method: two inputs, one view, nine briefings. */}
+                  <div className="bg-white rounded-xl border border-slate-100 p-4">
+                    <p className="text-[9px] font-bold uppercase tracking-widest text-slate-400 mb-3">
+                      How it worked
+                    </p>
+
+                    <div className="grid grid-cols-2 gap-2">
+                      <div className="rounded-lg bg-purple-50 border border-purple-100 px-2 py-2 text-center">
+                        <p className="text-[10px] font-bold text-purple-700 leading-tight">
+                          Performance data
+                        </p>
+                        <p className="text-[9px] text-purple-400 mt-0.5">what happened</p>
+                      </div>
+                      <div className="rounded-lg bg-amber-50 border border-amber-100 px-2 py-2 text-center">
+                        <p className="text-[10px] font-bold text-amber-700 leading-tight">
+                          What members said
+                        </p>
+                        <p className="text-[9px] text-amber-500 mt-0.5">what it cost</p>
+                      </div>
+                    </div>
+
+                    <div className="flex justify-center py-2">
+                      <div className="w-px h-4 bg-slate-200"></div>
+                    </div>
+
+                    <div className="rounded-lg bg-slate-900 px-3 py-2 text-center">
+                      <p className="text-[10px] font-bold text-white">
+                        One view per department
+                      </p>
+                    </div>
+
+                    <div className="flex justify-center py-2">
+                      <div className="w-px h-4 bg-slate-200"></div>
+                    </div>
+
+                    <div className="flex items-end justify-center gap-1.5">
+                      {Array.from({ length: 9 }).map((_, i) => (
+                        <div
+                          key={i}
+                          className="w-4 h-6 rounded-sm bg-purple-300"
+                          title="Department head"
+                        ></div>
+                      ))}
+                      <div className="w-px h-6 bg-slate-200 mx-1"></div>
+                      <div
+                        className="w-4 h-8 rounded-sm bg-slate-900"
+                        title="President"
+                      ></div>
+                    </div>
+                    <p className="text-[9px] text-center text-slate-400 mt-2 leading-relaxed">
+                      9 department heads briefed individually, plus the
+                      president. Advice and milestones written per department.
+                    </p>
+                  </div>
+
                   <div className="grid grid-cols-3 gap-3 mt-auto">
                     <div className="bg-white border border-slate-200 rounded-xl p-3 text-center">
                       <p className="text-lg font-bold text-purple-600">9</p>
